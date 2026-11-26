@@ -1,17 +1,13 @@
-<!DOCTYPE html>
 <html>
-
-<head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>My Flask App</title>
-</head>
-
-<body>
-    <h1>Welcome!</h1>
-    <h2>What's your name?</h2>
-    <form action="/greet" method="POST">
-        <input type="text" name="E1" placeholder="Enter your name" required>
-        <button type="submit">Submit</button>
-    </form>
-</body>
+    <head>
+        <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+        <title>Flask app</title>
+    </head>
+    <body>
+        <p>Switcher template</p>
+        <form action="/switch" method="POST">
+            <button type="submit">Switch</button>
+        </form>
+    </body>
 </html>

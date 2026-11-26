@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <link rel="stylesheet"
+          href="{{ url_for('static', filename='style_new.css') }}">
+        <title>Flask app</title>
+    </head>
+    <body>
+        <p>This is the new page!</p>
+        <form action="/switchnew" method = "POST">
+            <button type="submit">Switch</button>
+        </form>
+    </body>
+</html>

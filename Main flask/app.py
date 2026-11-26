@@ -6,10 +6,13 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/greet', methods=['POST'])
-def greet():
-    name = request.form.get('E1')
-    return "Hello, " + name + "!"
+@app.route('/switch', methods = ["POST"])
+def switch():
+    return render_template('new_page.html')
+
+@app.route('/switchnew', methods = ["POST"])
+def switch_new():
+    return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(host = '0.0.0.0', port = 5000, debug = True)
+    app.run(debug=True)
