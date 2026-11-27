@@ -1,13 +1,22 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet"
-          href="{{ url_for('static', filename='style.css') }}">
-        <title>Flask app</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>Flask App</title>
     </head>
     <body>
-        <h1>Switcher template</h1>
-        <form action="/switch" method="POST">
-            <button type="submit">Switch</button>
+        <h1>Calculator ITR 3</h1>
+        <form method="POST" action="/calculate">
+            <input type="number" step="any" name="num1" placeholder="First number" required>
+            <input type="number" step ="any" name = "num2" placeholder="Second number" required>
+            <select name="operation" required>
+                <option value="add">Add</option>
+                <option value="subtract">Subtract</option>
+                <option value="multiply">Multiply</option>
+                <option value="divide">Divide</option>
+            </select>
+            <button type="submit">Calculate</button>
         </form>
+        <h2>Result: {{ answer if answer is defined else "Waiting..." }}</h2>
     </body>
 </html>

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import *
 
 app = Flask(__name__)
 
@@ -6,13 +6,27 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/switch', methods = ["POST"])
-def switch():
-    return render_template('new_page.html')
+@app.route('/calculate', methods=['POST'])
+def calculate():
+    try:
+        num1 = float(request.form['num1'])
+        num2 = float(request.form['num2'])
+        operation = request.form['operation']
+        if operation == 'add':
+            answer = num1 + num2
+        elif operation == 'subtract':
+            answer = num1 - num2
+        elif operation == 'multiply':
+            answer = num1 * num2
+        elif operation == 'divide':
+            if num2 == 0:
+                return render_template('index.html', answer="Error: Division by zero")
+            else:
+                answer = num1 / num2
+    except (ValueError, ZeroDivisionError):
+        return render_template('index.html', answer="Error: Invalid input or division by zero")
 
-@app.route('/switchnew', methods = ["POST"])
-def switch_new():
-    return render_template('index.html')
+    return render_template('index.html', answer=answer)
 
 if __name__ == '__main__':
     app.run(debug=True)

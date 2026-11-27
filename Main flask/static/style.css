@@ -1,17 +1,19 @@
-button {
-    background-color:white;
-    color: black;
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-
-}
-
 body {
-    background-color:black
+    color: #008cff
 }
 
-h1 {
-    color:white;
-    font-size: 24px;
-    font-family: Arial, sans-serif, bold;
+num1 {
+    color: #00ffb3
+}
+
+num2 {
+    color: #00ffb3
+}
+
+button {
+    background-color: #008cff;
+    color: #02ff02;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial, sans-serif
 }
