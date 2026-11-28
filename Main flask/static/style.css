@@ -1,19 +1,51 @@
-body {
-    color: #008cff
+#box1 {
+    border:1px solid;
+    height: 50px;
+    width: 300px;
+    background-color:#3B1E54;
+    border-radius: 100px;
+    position: fixed;
+    bottom: 0;
+    transition:all 0.3s ease
 }
 
-num1 {
-    color: #00ffb3
-}
 
-num2 {
-    color: #00ffb3
-}
 
 button {
-    background-color: #008cff;
-    color: #02ff02;
-    font-size: 20px;
+    position: fixed;
+    bottom: 15px;
+    left: 30px;
+    height: 25px;
+    border-radius: 100px;
+    transition:all 0.3s ease;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+button:active {
+    color: green;
+    font-size: 15px;
     font-weight: bold;
-    font-family: Arial, sans-serif
+} 
+
+#box1:hover {
+    width: 400px;
+    border-radius: 100px;
+}
+
+li:hover {
+    color: green;
+    font-size: 15px;
+    font-weight: bold;
+    transition:all 0.3s ease;
+}
+
+.fa-arrow-up-from-bracket {
+    position: fixed;
+    bottom: 15px;
+    left: 100px;
+    z-index: 1;
+    color: white;
 }

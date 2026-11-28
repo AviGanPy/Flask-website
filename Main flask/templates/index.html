@@ -1,22 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/640f6b6c58.js" crossorigin="anonymous"></script>
         <title>Flask App</title>
     </head>
-    <body>
-        <h1>Calculator ITR 3</h1>
-        <form method="POST" action="/calculate">
-            <input type="number" step="any" name="num1" placeholder="First number" required>
-            <input type="number" step ="any" name = "num2" placeholder="Second number" required>
-            <select name="operation" required>
-                <option value="add">Add</option>
-                <option value="subtract">Subtract</option>
-                <option value="multiply">Multiply</option>
-                <option value="divide">Divide</option>
-            </select>
-            <button type="submit">Calculate</button>
-        </form>
-        <h2>Result: {{ answer if answer is defined else "Waiting..." }}</h2>
-    </body>
+<body>
+    <ul>
+        <li>Element 1</li>
+        <li>Element 2</li>
+        <li>Element 3</li>
+        <li>Element 4</li>
+        <li>Element 5</li>
+        <li>Element 6</li>
+        <li>Element 7</li>
+        <li>Element 8</li>
+        <li>Element 9</li>
+        <li>Element 10</li>
+    </ul>
+    <div id = "box1"></div>
+    <div id = "box2">Hi</div>
+    <i class="fa-solid fa-arrow-up-from-bracket"></i>
+    <button id = "button1">Click me</button>
 </html>
