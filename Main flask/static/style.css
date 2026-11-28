@@ -1,19 +1,46 @@
-body {
-    color: #008cff
+h1 {
+    font-family: 'Press Start 2P', cursive
 }
 
-num1 {
-    color: #00ffb3
+h2 {
+    font-family: sans-serif;
+
+}
+input {
+    border-radius: 300px;
+    padding: 2px;
+    transition: all 0.3s ease;
 }
 
-num2 {
-    color: #00ffb3
+select {
+    border-radius: 300px;
+    padding: 2px;
+    bottom: 1px;
+    left: 12px;
+
+    transition: all 0.3s ease;
 }
 
 button {
-    background-color: #008cff;
-    color: #02ff02;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: Arial, sans-serif
+    border-radius: 300px;
+    transition: all 0.3s ease;
+}
+
+select:hover {
+    transform:scale(1.08);
+    background-color: burlywood;
+}
+
+input:hover {
+    transform:scale(1.08);
+    background-color: burlywood;
+}
+
+div:hover {
+    transform:scale(1.08);
+}
+
+button:hover {
+    transform:scale(1.08);
+    background-color: green;
 }
